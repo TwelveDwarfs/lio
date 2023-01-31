@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Lora', serif;
+}
+
+.container {
+  width: 100%
+  height: 100vh;
+  /* background: red; */
+  margin: 40px auto;
+}
+
+.texts h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+.judulimg {
+  position: absolute;
+  top: 10px;
+  left: 520px;
+  z-index: -1;
+  /* transform: rotateX(deg); */
+  transform: rotate(20deg);
+}
+
+.sparkle {
+  display: flex;
+  position: relative;
+}
+
+.sparkle span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  /* background: #4fc3dc; */
+  margin: 0 4px;
+  /* border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44,
+  0 0 50px #4fc3dc,
+  0 0 100px #4fc3dc; */
+  animation: animate 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+
+.sparkle span:nth-child(even) {
+  /* background: #ff2d75;
+  box-shadow: 0 0 0 10px #ff2d7544,
+  0 0 50px #ff2d75,
+  0 0 100px #ff2d75; */
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+.sparkle img {
+  /* opacity: .5; */
+}
+
+.texts {
+  width: 650px;
+  margin: 0px auto;
+  /* background: red; */
+}
+
+.texts .paragraph {
+  font-size: 1.4em;
+  text-indent: 20px;
+}
+
+.rose {
+  position: absolute;
+  bottom: -115px;
+  left: 70%;
+}
+
+.vid {
+  position: absolute;
+  left: 23%;
+  top: 550px;
+  width: 300px;
+  height: 200px;
+}
+
+.smallpar {
+  width: 260px;
+  height: 100px;
+  /* background: red; */
+  float: right;
+  font-size: 14px;
+  position: relative;
+  left: -50px;
+  top: 13px;
+  font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+  .texts h1 {
+    font-size: 2.5em;
+    margin-top: 30px;
+    /* text-align: center; */
+  }
+  
+  .texts {
+    /* width: 100%; */
+    /* background: red; */
+    /* margin: 0 auto; */
+  }
+  
+  .judulimg {
+    position: absolute;
+    left: 120px;
+    top: -10px;
+    width: 130px;
+    height: 130px;
+  }
+  
+  .container .paragraph {
+    font-size: 17px;
+    margin: 20px;
+    margin-top: -20px;
+  }
+  
+  .smallpar {
+    font-size: 12px;
+    margin-top: 50px;
+    width: 200px;
+    position: absolute;
+    /* display: flex; */
+    /* justify-content: center; */
+    text-align: center;
+    top: 85vh;
+    left: 75px;
+  }
+  
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 140vh;
+    /* align-items: center; */
+    margin: 0 auto;
+  }
+  
+  .vid, .rose{
+    /* display: none; */
+  }
+  
+  .vid {
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    top: 110vh;
+    left: 50px;
+  }
+  
+  .rose {
+    position: absolute;
+    width: 130px;
+    left: 110px;
+    top: 75vh;
+    height: 130px;
+    /* justify-content: center; */
+  }
+}
+  
+  .sparkle {
+    position: fixed;
+  }
+}
